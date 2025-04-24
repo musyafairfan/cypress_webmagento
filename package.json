@@ -1,0 +1,16 @@
+{
+  "name": "cypress_webmagento",
+  "version": "1.0.0",
+  "description": "Automated testing for Webmagento using Cypress",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Irfan",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^14.3.2"
+  }
+}
