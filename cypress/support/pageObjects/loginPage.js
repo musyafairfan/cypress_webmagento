@@ -12,11 +12,11 @@ class loginPage {
         cy.get('.panel > .header > .authorization-link > a').click()
     }
 
-    confirmLoginPage1() {
+    verifyLoginPage1() {
         cy.get('.base').should('contain','Customer Login')
     }
 
-    confirmLoginPage2() {
+    verifyLoginPage2() {
         cy.get('#block-customer-login-heading').should('contain','Registered Customers')
     }
 
@@ -40,7 +40,7 @@ class loginPage {
         cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2').click()
     }
 
-    confirmSuccessLogin() {
+    verifySuccessLogin() {
         cy.get('.panel > :nth-child(2) > .greet > .logged-in').should('contain',`Welcome, ${firstName} ${lastName}!`)
     }
 

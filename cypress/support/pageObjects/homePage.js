@@ -2,11 +2,11 @@ const base = ['Home Page', 'You are signed out']
 
 class homePage {
     //Before Login
-    confirmTitle1() {
+    verifyTitle1() {
         cy.get('.base').should('be.contain', base[0]);
     }
 
-    confirmTitle2() {
+    verifyTitle2() {
         cy.get('.base').should('be.contain', base[1]);
     }
 
@@ -14,23 +14,23 @@ class homePage {
         cy.get('.base').should('be.contain', 'You have signed out and will go to our homepage in 5 seconds.');
     }
 
-    confirmSignIn() {
+    verifySignIn() {
         cy.get('.panel > .header > .authorization-link > a').should('be.visible');
     }
 
-    confrimCreateAccount() {
+    verifyCreateAccount() {
         cy.get('.panel > .header > :nth-child(3) > a').should('be.visible');
     }
 
-    confirmContentTitle() {
+    verifyContentTitle() {
         cy.get('.content-heading > .title').should('be.contain', 'Hot Sellers');
     }
 
-    confirmSearchBox() {
+    verifySearchBox() {
         cy.get('#search').should('be.visible');
     }
 
-    confirmShowcart() {
+    verifyShowcart() {
         cy.get('.showcart').should('be.visible');
     }
 

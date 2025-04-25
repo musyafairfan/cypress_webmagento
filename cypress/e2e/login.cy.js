@@ -5,21 +5,21 @@ describe('Login', () => {
     it('Login Success Using Valid Data & Logout', () => {
         cy.visit('');
         loginPage.clickSigIn();
-        loginPage.confirmLoginPage1();
-        loginPage.confirmLoginPage2();
+        loginPage.verifyLoginPage1();
+        loginPage.verifyLoginPage2();
         loginPage.validEmail();
         loginPage.validPwd();
         loginPage.clickBtnSignIn();
-        loginPage.confirmSuccessLogin();
+        loginPage.verifySuccessLogin();
         homePage.clickDropdownAccount();
         homePage.clickSignOut();
-        homePage.confirmTitle2();
+        homePage.verifyTitle2();
     });
     it('Login Failed Using Inalid Email', () => {
         cy.visit('');
         loginPage.clickSigIn();
-        loginPage.confirmLoginPage1();
-        loginPage.confirmLoginPage2();
+        loginPage.verifyLoginPage1();
+        loginPage.verifyLoginPage2();
         loginPage.invalidEmail();
         loginPage.validPwd();
         loginPage.clickBtnSignIn();
@@ -28,8 +28,8 @@ describe('Login', () => {
     it('Login Failed Using Inalid Password', () => {
         cy.visit('');
         loginPage.clickSigIn();
-        loginPage.confirmLoginPage1();
-        loginPage.confirmLoginPage2();
+        loginPage.verifyLoginPage1();
+        loginPage.verifyLoginPage2();
         loginPage.validEmail();
         loginPage.invalidPwd();
         loginPage.clickBtnSignIn();
@@ -38,8 +38,8 @@ describe('Login', () => {
     it('Login Failed Empty Email', () => {
         cy.visit('');
         loginPage.clickSigIn();
-        loginPage.confirmLoginPage1();
-        loginPage.confirmLoginPage2();
+        loginPage.verifyLoginPage1();
+        loginPage.verifyLoginPage2();
         loginPage.validPwd();
         loginPage.clickBtnSignIn();
         loginPage.msgEmptyEmail();
@@ -47,8 +47,8 @@ describe('Login', () => {
     it('Login Failed Empty Password', () => {
         cy.visit('');
         loginPage.clickSigIn();
-        loginPage.confirmLoginPage1();
-        loginPage.confirmLoginPage2();
+        loginPage.verifyLoginPage1();
+        loginPage.verifyLoginPage2();
         loginPage.validEmail();
         loginPage.clickBtnSignIn();
         loginPage.msgEmptyPwd();
@@ -56,8 +56,8 @@ describe('Login', () => {
     it('Login Failed Empty Email & Password', () => {
         cy.visit('');
         loginPage.clickSigIn();
-        loginPage.confirmLoginPage1();
-        loginPage.confirmLoginPage2();
+        loginPage.verifyLoginPage1();
+        loginPage.verifyLoginPage2();
         loginPage.clickBtnSignIn();
         loginPage.msgEmptyEmail();
         loginPage.msgEmptyPwd();
